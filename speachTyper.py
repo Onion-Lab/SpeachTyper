@@ -16,7 +16,7 @@ class speachTyper(QThread) :
 
             with sr.Microphone() as source:
                 print("open",datetime.datetime.now())
-                audio = self.r.listen(source, timeout=5, phrase_time_limit=5)
+                audio = self.r.listen(source)
 
             # Speech recognition using Google Speech Recognition
             try:
